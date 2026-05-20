@@ -2,27 +2,28 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
-import projectPrimates from "@/assets/project-primates.jpg";
-import projectMolecular from "@/assets/project-molecular.jpg";
+import customerSegmentation from "@/assets/customer segmentation project.png";
+import flightData from "@/assets/Flight Data Visualization.png";
+import musicPerformance from "@/assets/music performance.png";
 
 const ProjectsSection = () => {
   const projects = [
     {
       title: "Machine Learning for Customer Segmentation & Fraud Detection",
       description: "Delivered machine learning models for customer segmentation and fraud detection in the insurance sector, analyzing large insurance datasets to inform business strategy and improve risk assessment.",
-      image: projectPrimates,
+      image: customerSegmentation,
       technologies: ["Python", "Machine Learning", "Customer Segmentation", "Fraud Detection", "Insurance Analytics"],
     },
     {
       title: "Post-COVID Flight Data Visualization",
       description: "Visualized 6 million rows of post-COVID flight data using Python and Tableau, uncovering trends and actionable insights for aviation stakeholders to support data-driven decision making.",
-      image: projectMolecular,
+      image: flightData,
       technologies: ["Python", "Tableau", "Big Data", "Data Visualization", "Aviation Analytics"],
     },
     {
       title: "Interactive Music Performance Data Explorer",
       description: "Developed an interactive Python-based data explorer, enabling dynamic visualization of music performance metrics and providing an engaging way to explore and analyze performance data.",
-      image: projectPrimates,
+      image: musicPerformance,
       technologies: ["Python", "Interactive Visualization", "Data Explorer", "Music Analytics"],
     },
   ];

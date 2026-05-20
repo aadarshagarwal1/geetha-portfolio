@@ -13,7 +13,7 @@ const AboutSection = () => {
     { icon: Phone, value: "+353-899847661" },
     { icon: Mail, value: "boda.geetha9@gmail.com" },
     { icon: MapPin, value: "Dublin, Ireland" },
-    { icon: Linkedin, value: "LinkedIn Profile" },
+    { icon: Linkedin, value: "linkedin.com/in/geethaboda" },
   ];
 
   return (
