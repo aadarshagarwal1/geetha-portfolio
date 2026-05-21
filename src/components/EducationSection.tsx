@@ -1,6 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Calendar, Award } from "lucide-react";
+import bepecDsCertificate from "@/assets/certificates/BEPEC DS Certificate.pdf";
+import bepecInternshipCertificate from "@/assets/certificates/Internship.pdf";
+import bmcCertificate from "@/assets/certificates/BMC_certificate_of_completion.pdf";
 
 const EducationSection = () => {
   const education = [
@@ -24,7 +27,26 @@ const EducationSection = () => {
     }
   ];
 
-  const certifications = [];
+  const certifications = [
+    {
+      title: "Data Science Internship",
+      issuer: "BEPEC Solutions Pvt. Ltd.",
+      date: "Aug 2021 – Apr 2022",
+      file: bepecInternshipCertificate,
+    },
+    {
+      title: "Data Science Program with Business Use-Cases",
+      issuer: "BEPEC Solutions Pvt. Ltd.",
+      date: "Apr 2022",
+      file: bepecDsCertificate,
+    },
+    {
+      title: "Bloomberg Market Concepts (BMC)",
+      issuer: "Bloomberg for Education",
+      date: "",
+      file: bmcCertificate,
+    },
+  ];
 
   return (
     <section id="education" className="py-20 bg-[hsl(var(--section-bg))]">
@@ -86,7 +108,6 @@ const EducationSection = () => {
           </div>
 
           {/* Certifications Section */}
-          {certifications.length > 0 && (
           <div className="mt-16">
             <h3 className="text-2xl font-bold text-foreground mb-8 flex items-center">
               <Award className="w-6 h-6 mr-3 text-[hsl(var(--primary))]" />
@@ -95,20 +116,27 @@ const EducationSection = () => {
             
             <div className="grid md:grid-cols-1 gap-6">
               {certifications.map((cert, index) => (
-                <Card key={index} className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-l-[hsl(var(--primary))]">
-                  <CardHeader className="pb-4">
-                    <CardTitle className="text-lg font-bold text-foreground mb-2">
-                      {cert.title}
-                    </CardTitle>
-                    <p className="text-lg font-semibold text-[hsl(var(--primary))]">
-                      {cert.issuer}
-                    </p>
-                  </CardHeader>
-                </Card>
+                <a
+                  key={index}
+                  href={cert.file}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block no-underline"
+                >
+                  <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-l-[hsl(var(--primary))]">
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-lg font-bold text-foreground mb-2">
+                        {cert.title}
+                      </CardTitle>
+                      <p className="text-lg font-semibold text-[hsl(var(--primary))]">
+                        {cert.issuer}
+                      </p>
+                    </CardHeader>
+                  </Card>
+                </a>
               ))}
             </div>
           </div>
-          )}
         </div>
       </div>
     </section>

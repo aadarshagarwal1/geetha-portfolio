@@ -5,14 +5,17 @@ import { ExternalLink } from "lucide-react";
 import customerSegmentation from "@/assets/customer segmentation project.png";
 import flightData from "@/assets/Flight Data Visualization.png";
 import musicPerformance from "@/assets/music performance.png";
+import capstoneReport from "@/assets/projects/capstone-insurance-ml-report.pdf";
+import ukuleleReport from "@/assets/projects/ukulele-tuesday-report.pdf";
 
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Machine Learning for Customer Segmentation & Fraud Detection",
+      title: "Machine Learning for Customer Segmentation & Fraud Detection in Auto Insurance",
       description: "Delivered machine learning models for customer segmentation and fraud detection in the insurance sector, analyzing large insurance datasets to inform business strategy and improve risk assessment.",
       image: customerSegmentation,
       technologies: ["Python", "Machine Learning", "Customer Segmentation", "Fraud Detection", "Insurance Analytics"],
+      link: capstoneReport,
     },
     {
       title: "Post-COVID Flight Data Visualization",
@@ -21,10 +24,11 @@ const ProjectsSection = () => {
       technologies: ["Python", "Tableau", "Big Data", "Data Visualization", "Aviation Analytics"],
     },
     {
-      title: "Interactive Music Performance Data Explorer",
-      description: "Developed an interactive Python-based data explorer, enabling dynamic visualization of music performance metrics and providing an engaging way to explore and analyze performance data.",
+      title: "Ukulele Tuesday Data Explorer",
+      description: "Developed an interactive Python GUI application for Ukulele Tuesday to query song metadata, filter play and request history by date range, and generate histograms and trend visualizations—supporting data-driven repertoire and session planning.",
       image: musicPerformance,
-      technologies: ["Python", "Interactive Visualization", "Data Explorer", "Music Analytics"],
+      technologies: ["Python", "Pandas", "Matplotlib", "Tkinter", "Plotly", "Data Visualization"],
+      link: ukuleleReport,
     },
   ];
 
