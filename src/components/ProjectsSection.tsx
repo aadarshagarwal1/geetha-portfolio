@@ -22,6 +22,7 @@ const ProjectsSection = () => {
       description: "Visualized 6 million rows of post-COVID flight data using Python and Tableau, uncovering trends and actionable insights for aviation stakeholders to support data-driven decision making.",
       image: flightData,
       technologies: ["Python", "Tableau", "Big Data", "Data Visualization", "Aviation Analytics"],
+      link: "https://public.tableau.com/app/profile/sagar.malik7098/viz/MIS41040Team-1/Story1?publish=yes",
     },
     {
       title: "Ukulele Tuesday Data Explorer",

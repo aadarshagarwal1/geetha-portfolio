@@ -5,7 +5,7 @@ const SkillsSection = () => {
   const skillCategories = [
     {
       title: "Programming & Databases",
-      skills: ["Python", "SQL", "R", "VBA"]
+      skills: ["Python", "SQL", "VBA"]
     },
     {
       title: "Data Analysis & Visualization", 
