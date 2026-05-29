@@ -4,25 +4,49 @@ import { Badge } from "@/components/ui/badge";
 const SkillsSection = () => {
   const skillCategories = [
     {
-      title: "Programming & Databases",
-      skills: ["Python", "SQL", "VBA"]
+      title: "Data Analytics",
+      skills: [
+        "Machine Learning",
+        "Predictive Modeling",
+        "Statistical Analysis",
+        "Customer Segmentation",
+        "Fraud Detection",
+      ],
     },
     {
-      title: "Data Analysis & Visualization", 
-      skills: ["Power BI", "Tableau", "Microsoft Excel", "Power Query", "Data Visualization", "Statistical Analysis"]
+      title: "Programming & Libraries",
+      skills: ["Python", "VBA", "scikit-learn", "LightGBM", "XGBoost", "CatBoost"],
     },
     {
-      title: "Analytics & Modeling",
-      skills: ["Predictive Modeling", "Machine Learning", "Statistical Analysis", "Process Automation"]
+      title: "Reporting & BI",
+      skills: [
+        "Advanced Excel",
+        "Tableau",
+        "Power BI",
+        "Power Query",
+        "SQL",
+        "Data Visualization",
+        "Interactive Dashboards",
+      ],
     },
     {
-      title: "Engineering & PLM Tools",
-      skills: ["CATIA V5", "Enovia VPM", "Product Lifecycle Management (PLM)"]
+      title: "Engineering & PLM",
+      skills: [
+        "CATIA V5",
+        "Enovia VPM",
+        "Product Lifecycle Management",
+        "Process Automation",
+      ],
     },
     {
-      title: "Professional Skills",
-      skills: ["Cross-functional Collaboration", "Technical Communication", "Stakeholder Management", "Training & Mentoring"]
-    }
+      title: "Competency",
+      skills: [
+        "Stakeholder Management",
+        "Decision Support",
+        "Problem Solving",
+        "Cross-functional Collaboration",
+      ],
+    },
   ];
 
   return (
@@ -31,11 +55,11 @@ const SkillsSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Skills & Expertise
+              Technical Skills
             </h2>
             <div className="w-24 h-1 bg-[hsl(var(--primary))] mx-auto mb-6"></div>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Comprehensive technical skills in business analytics, data engineering, and process automation
+              Core competencies across data analytics, reporting, and engineering tools
             </p>
           </div>
 
@@ -50,7 +74,7 @@ const SkillsSection = () => {
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill, skillIndex) => (
-                      <Badge 
+                      <Badge
                         key={skillIndex}
                         variant="secondary"
                         className="bg-[hsl(var(--primary))] text-white hover:bg-[hsl(var(--primary))]/90 px-3 py-1 text-sm font-medium"

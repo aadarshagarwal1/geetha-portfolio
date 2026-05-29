@@ -11,24 +11,24 @@ import ukuleleReport from "@/assets/projects/ukulele-tuesday-report.pdf";
 const ProjectsSection = () => {
   const projects = [
     {
-      title: "Machine Learning for Customer Segmentation & Fraud Detection in Auto Insurance",
-      description: "Delivered machine learning models for customer segmentation and fraud detection in the insurance sector, analyzing large insurance datasets to inform business strategy and improve risk assessment.",
+      title: "Customer Segmentation and Fraud Detection in the Insurance Sector",
+      description: "Developed a Machine Learning underwriting model training and comparing LightGBM, XGBoost, and CatBoost to classify policyholder risk, processing 116,000+ raw records down to 51,600 clean records and capping customer exclusions at 4% with 82% accuracy. Increased portfolio profitability by 157% (from €406K to €1.04M) by selecting LightGBM as the optimal model, isolating 9 key predictors through feature importance analysis, and tuning classification thresholds to minimise asymmetric error costs.",
       image: customerSegmentation,
-      technologies: ["Python", "Machine Learning", "Customer Segmentation", "Fraud Detection", "Insurance Analytics"],
+      technologies: ["Python", "LightGBM", "XGBoost", "CatBoost", "Machine Learning"],
       link: capstoneReport,
     },
     {
-      title: "Post-COVID Flight Data Visualization",
-      description: "Visualized 6 million rows of post-COVID flight data using Python and Tableau, uncovering trends and actionable insights for aviation stakeholders to support data-driven decision making.",
+      title: "US Flight Delay Decision Support System Visualization",
+      description: "Integrated 5 datasets (US flight records, weather metrics, airport geolocation, and state population data) using Tableau Prep, applying data cleaning, field standardisation, and calculated metrics to enable multi-source analysis. Built an interactive Tableau DSS with dashboards covering delay cause analysis, seasonal trends, route performance, and airport hotspot mapping, enabling decision-makers to identify operational inefficiencies and weather-driven delay patterns.",
       image: flightData,
-      technologies: ["Python", "Tableau", "Big Data", "Data Visualization", "Aviation Analytics"],
+      technologies: ["Tableau", "Tableau Prep", "Data Visualization"],
       link: "https://public.tableau.com/app/profile/sagar.malik7098/viz/MIS41040Team-1/Story1?publish=yes",
     },
     {
       title: "Ukulele Tuesday Data Explorer",
       description: "Developed an interactive Python GUI application for Ukulele Tuesday to query song metadata, filter play and request history by date range, and generate histograms and trend visualizations—supporting data-driven repertoire and session planning.",
       image: musicPerformance,
-      technologies: ["Python", "Pandas", "Matplotlib", "Tkinter", "Plotly", "Data Visualization"],
+      technologies: ["Python", "Pandas", "Matplotlib", "Tkinter", "Plotly"],
       link: ukuleleReport,
     },
   ];

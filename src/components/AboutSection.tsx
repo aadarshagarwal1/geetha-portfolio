@@ -1,19 +1,18 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, Phone, Mail, Linkedin, GraduationCap, Calendar, Globe, Award } from "lucide-react";
+import { MapPin, Phone, Mail, Linkedin, GraduationCap, Calendar, Award } from "lucide-react";
 
 const AboutSection = () => {
   const quickFacts = [
     { icon: MapPin, label: "Location", value: "Dublin, Ireland" },
     { icon: GraduationCap, label: "Education", value: "MSc Business Analytics" },
     { icon: Calendar, label: "Experience", value: "2+ Years" },
-    { icon: Globe, label: "Specialization", value: "Data Analytics & Process Automation" },
+    { icon: Award, label: "Sectors", value: "Aviation, Insurance & IT Consulting" },
   ];
 
   const contactInfo = [
-    { icon: Phone, value: "+353-899847661" },
-    { icon: Mail, value: "boda.geetha9@gmail.com" },
-    { icon: MapPin, value: "Dublin, Ireland" },
-    { icon: Linkedin, value: "linkedin.com/in/geethaboda" },
+    { icon: Phone, value: "+353-899847661", href: "tel:+353899847661" },
+    { icon: Mail, value: "boda.geetha9@gmail.com", href: "mailto:boda.geetha9@gmail.com" },
+    { icon: Linkedin, value: "linkedin.com/in/geethaboda", href: "https://www.linkedin.com/in/geethaboda/" },
   ];
 
   return (
@@ -22,7 +21,7 @@ const AboutSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              About Me
+              Professional Summary
             </h2>
             <div className="w-24 h-1 bg-[hsl(var(--primary))] mx-auto"></div>
           </div>
@@ -30,21 +29,23 @@ const AboutSection = () => {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content - Takes 2/3 of the space */}
             <div className="lg:col-span-2">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-                Business Analytics & Data Engineering Specialist
-              </h3>
-              
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Business Analytics MSc graduate with 2+ years of experience in data-driven engineering and analytics, delivering process automation and efficiency improvements in high-compliance, cross-functional environments. Recognized for rapid mastery of complex systems, technical communication, and translating data into actionable business insights. Proficient in Python, SQL, Power BI, and Tableau.
+                Data Analytics professional with 2+ years of experience bridging aerospace engineering and data analytics, with hands-on expertise in Python, SQL, Power BI, and Tableau. Holding an MSc in Business Analytics with proven ability in building predictive models, automating workflows, and delivering measurable impact including a 40% reduction in process review time across 4 Airbus programmes. Skilled in translating complex technical challenges into clear, data-driven business solutions across Aviation, Insurance, and IT consulting sectors.
               </p>
 
               {/* Contact Information Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {contactInfo.map((contact, index) => (
-                  <div key={index} className="flex items-center space-x-3 p-3 rounded-lg bg-white/50 hover:bg-white transition-colors duration-200">
+                  <a
+                    key={index}
+                    href={contact.href}
+                    target={contact.icon === Linkedin ? "_blank" : undefined}
+                    rel={contact.icon === Linkedin ? "noopener noreferrer" : undefined}
+                    className="flex items-center space-x-3 p-3 rounded-lg bg-white/50 hover:bg-white transition-colors duration-200 no-underline"
+                  >
                     <contact.icon className="w-5 h-5 text-[hsl(var(--primary))]" />
-                    <span className="text-foreground font-medium">{contact.value}</span>
-                  </div>
+                    <span className="text-foreground font-medium hover:text-[hsl(var(--primary))]">{contact.value}</span>
+                  </a>
                 ))}
               </div>
             </div>

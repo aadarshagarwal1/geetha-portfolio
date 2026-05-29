@@ -19,8 +19,8 @@ const EducationSection = () => {
       ]
     },
     {
-      institution: "CMR College of Engineering & Technology, Hyderabad, India",
-      degree: "Bachelor of Technology in Mechanical Engineering", 
+      institution: "CMR College of Engineering & Technology, India",
+      degree: "B.Tech, Mechanical Engineering", 
       dates: "2017 – 2021",
       grade: "",
       coursework: []
@@ -29,10 +29,22 @@ const EducationSection = () => {
 
   const certifications = [
     {
-      title: "Data Science Internship",
-      issuer: "BEPEC Solutions Pvt. Ltd.",
-      date: "Aug 2021 – Apr 2022",
-      file: bepecInternshipCertificate,
+      title: "Bloomberg — Finance Fundamentals, Market Concepts, ESG",
+      issuer: "Bloomberg for Education",
+      date: "",
+      file: bmcCertificate,
+    },
+    {
+      title: "Applied Data Science using Python",
+      issuer: "Professional Certification",
+      date: "",
+      file: "",
+    },
+    {
+      title: "AWS Cloud Practitioner",
+      issuer: "Amazon Web Services",
+      date: "",
+      file: "",
     },
     {
       title: "Data Science Program with Business Use-Cases",
@@ -41,10 +53,10 @@ const EducationSection = () => {
       file: bepecDsCertificate,
     },
     {
-      title: "Bloomberg Market Concepts (BMC)",
-      issuer: "Bloomberg for Education",
-      date: "",
-      file: bmcCertificate,
+      title: "Data Science Internship",
+      issuer: "BEPEC Solutions Pvt. Ltd.",
+      date: "Aug 2021 – Apr 2022",
+      file: bepecInternshipCertificate,
     },
   ];
 
@@ -115,14 +127,8 @@ const EducationSection = () => {
             </h3>
             
             <div className="grid md:grid-cols-1 gap-6">
-              {certifications.map((cert, index) => (
-                <a
-                  key={index}
-                  href={cert.file}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block no-underline"
-                >
+              {certifications.map((cert, index) => {
+                const certCard = (
                   <Card className="bg-white shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-l-[hsl(var(--primary))]">
                     <CardHeader className="pb-4">
                       <CardTitle className="text-lg font-bold text-foreground mb-2">
@@ -131,10 +137,27 @@ const EducationSection = () => {
                       <p className="text-lg font-semibold text-[hsl(var(--primary))]">
                         {cert.issuer}
                       </p>
+                      {cert.date && (
+                        <p className="text-sm text-muted-foreground mt-1">{cert.date}</p>
+                      )}
                     </CardHeader>
                   </Card>
-                </a>
-              ))}
+                );
+
+                return cert.file ? (
+                  <a
+                    key={index}
+                    href={cert.file}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block no-underline"
+                  >
+                    {certCard}
+                  </a>
+                ) : (
+                  <div key={index}>{certCard}</div>
+                );
+              })}
             </div>
           </div>
         </div>

@@ -5,19 +5,19 @@ import { Calendar, MapPin } from "lucide-react";
 const ExperienceSection = () => {
   const experiences = [
     {
-      title: "Design Engineer",
+      title: "Analyst",
       company: "Capgemini Technology Services India Limited",
       location: "India",
       dates: "Apr 2022 – Aug 2024",
       responsibilities: [
-        "Delivered structural design solutions for Airbus programmes (A320, A330, A350, A380) by collaborating with 20+ cross-functional team members across India, Spain, and Germany, ensuring quality compliance and on-time delivery of high-value contracts.",
+        "Analysed design requirements and collaborated with 20+ engineers across India, Spain, and Germany to deliver 50+ structural solutions across 4 Airbus programmes (A320, A330, A350, A380) covering MSN 700 & 701, achieving an ~80% on-time delivery rate.",
+        "Developed a VBA automation script to streamline installation quality checks across datasets of ~85 records and 17 fields, reducing review time by ~40% (saving ~35 mins per check) and eliminating manual inefficiencies for a team of 8–9 engineers.",
+        "Analysed 30+ structural design datasets on the A380 programme to identify cost and weight reduction opportunities, presenting findings as clear recommendations to internal engineering teams and Airbus stakeholders.",
+        "Performed quality analysis on 100+ structural design changes using CATIA V5, identifying and resolving 10–20 critical errors against Airbus standards to prevent downstream rework and ensuring accurate documentation releases.",
         "Managed and maintained structured design data–including bills of materials, engineering change records, and configuration datasets–across multiple aircraft programmes, ensuring 100% accuracy and traceability throughout the project lifecycle.",
-        "Engineered a VBA automation script to eliminate manual inefficiencies in the installation quality check process, reducing review time by ~40% and improving output accuracy for the team.",
-        "Analyzed complex design datasets to identify structural optimization opportunities, translating findings into actionable recommendations for internal teams and Airbus stakeholders, supporting cost and weight reduction initiatives.",
-        "Validated design changes and managed engineering documentation in coordination with internal and Airbus client teams, building strong cross-cultural relationships and supporting seamless international project delivery.",
         "Trained 3 new team members on design processes, CATIA V5, and Airbus standards, accelerating onboarding and maintaining quality standards.",
-        "Received recognition from senior stakeholders for delivering work quality on par with experienced engineers as a fresher, demonstrating rapid learning and technical excellence."
-      ]
+        "Received recognition from senior stakeholders for delivering work quality on par with experienced engineers as a fresher, demonstrating rapid learning and technical excellence.",
+      ],
     },
     {
       title: "Data Analyst Trainee",
@@ -25,11 +25,11 @@ const ExperienceSection = () => {
       location: "India",
       dates: "Aug 2021 – Apr 2022",
       responsibilities: [
-        "Completed an intensive data analytics program, delivering real-world projects in data cleaning, exploratory analysis, and predictive modeling using Python and SQL.",
-        "Developed interactive Tableau dashboards and visual reports, communicating data-driven insights to technical and non-technical audiences.",
-        "Built and evaluated predictive models–including Logistic Regression, Decision Trees, and Random Forest–using performance metrics to assess model accuracy and business relevance."
-      ]
-    }
+        "Used SQL, Excel, and stakeholder analysis across 20+ enterprise data sources and 15 stakeholders in 3 countries to identify 5 high-priority analytics use cases and define KPI roadmaps for business growth.",
+        "Built interactive Tableau dashboards to visualise KPI roadmaps and analytics findings for the training provider client, enabling data-driven decision making across 3 countries.",
+        "Built and evaluated Python-based predictive models (Logistic Regression, Decision Trees, Random Forest) across 1,200 employee records and 28 HR features to classify employee performance.",
+      ],
+    },
   ];
 
   return (
