@@ -71,7 +71,7 @@ const HeroSection = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-3xl mx-auto leading-relaxed animate-slide-up">
-          Data Analytics Professional
+          Business & Data Analyst
         </p>
         
         <div className="flex items-center justify-center space-x-2 text-white/80 mb-12 animate-slide-up" style={{animationDelay: '0.2s'}}>
